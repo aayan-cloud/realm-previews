@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Methow Roofing | Concept preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.jpg">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+:root{--bg:#f3f4f5;--surface:#e8ebee;--ink:#14181d;--muted:#58616c;--line:#d9dee3;--accent:#b9482a;--onAccent:#fbfbfb;--deep:#1b2128;--onDeep:#eef1f4;color-scheme:light;--display:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;--text:"Geist",ui-sans-serif,system-ui,sans-serif;--r:14px;--ease:cubic-bezier(.16,1,.3,1)}
+@media (prefers-color-scheme:dark){:root{--bg:#111519;--surface:#191f25;--ink:#eef1f4;--muted:#a3acb6;--line:#2a323b;--accent:#e0663f;--onAccent:#14181d;--deep:#0b0e11;--onDeep:#eef1f4;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:800}
+p{max-width:62ch;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:var(--onAccent);padding:.95rem 1.4rem;border-radius:999px;font:600 1rem var(--text);text-decoration:none;white-space:nowrap;transition:transform .25s var(--ease),filter .25s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.preview-note{background:var(--deep);color:var(--onDeep);font:500 13px/1.4 var(--text);text-align:center;padding:.55rem 1rem}
+.preview-note a{color:var(--onDeep)}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.7rem;font:800 1.2rem var(--display);letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.logo{width:40px;height:40px;border-radius:10px;object-fit:cover;background:var(--surface)}
+.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--accent);color:var(--onAccent);font:800 .95rem var(--display);letter-spacing:0}
+.nav ul{display:flex;gap:1.6rem;list-style:none;padding:0;font-weight:500;font-size:.95rem}
+.nav ul a{text-decoration:none;color:var(--muted)}.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:.65rem 1.1rem;font-size:.92rem}
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,6vw,5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.eyebrow{font:600 .8rem var(--text);text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:1.1rem}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);font-weight:800}
+.hero p{font-size:1.15rem;margin-top:1.3rem}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem;margin-top:2rem}
+.tel{font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent)}
+.hero__media{position:relative;border-radius:calc(var(--r) * 2);overflow:hidden;aspect-ratio:4/5;max-height:640px}
+.hero__media img{width:100%;height:100%;object-fit:cover;animation:settle 1.6s var(--ease) both}
+@keyframes settle{from{transform:scale(1.08)}to{transform:none}}
+.facts{border-block:1px solid var(--line)}
+.facts dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;padding-block:1.6rem}
+.facts dt{font-size:.82rem;color:var(--muted)}.facts dd{font:700 1.15rem var(--display);margin-top:.2rem}
+.facts dd a{text-decoration:none}
+section{padding-block:clamp(4rem,8vw,7rem)}
+.services h2{max-width:18ch;margin-bottom:2.6rem}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.svc{grid-column:span 2;background:var(--surface);border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;justify-content:flex-end;min-height:220px}
+.svc h3{font-size:1.35rem;font-weight:700;margin-bottom:.5rem}.svc p{font-size:.98rem}
+.svc--lead{grid-column:span 4;grid-row:span 2;position:relative;overflow:hidden;min-height:440px;padding:0;color:#fff}
+.svc--lead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.svc--lead::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgb(10 12 14 / .82))}
+.svc--lead .svc__body{position:relative;z-index:1;padding:2rem}.svc--lead h3{font-size:1.9rem}.svc--lead p{color:rgb(255 255 255 / .86)}
+.bento[data-n="2"] .svc:not(.svc--lead){grid-column:span 2;grid-row:span 2}
+.bento[data-n="4"] .svc:last-child{grid-column:span 6;min-height:180px;background:var(--deep);color:var(--onDeep)}
+.bento[data-n="4"] .svc:last-child p{color:color-mix(in srgb,var(--onDeep) 78%,transparent)}
+.bento[data-n="3"] .svc:last-child,.bento[data-n="5"] .svc:last-child{background:var(--deep);color:var(--onDeep)}
+.bento[data-n="3"] .svc:last-child p,.bento[data-n="5"] .svc:last-child p{color:color-mix(in srgb,var(--onDeep) 78%,transparent)}
+.bento[data-n="5"] .svc:nth-last-child(-n+2){grid-column:span 3}
+.quote{padding-block:clamp(3rem,6vw,5rem)}
+.quote blockquote{font:700 clamp(1.5rem,2.6vw,2.2rem)/1.3 var(--display);letter-spacing:-.01em;max-width:34ch}
+.quote blockquote::before{content:"“";color:var(--accent)}.quote blockquote::after{content:"”";color:var(--accent)}
+.quote p{margin-top:1.2rem;font-size:.95rem}
+.statement{position:relative;color:var(--onDeep);background:var(--deep);overflow:hidden}
+.statement img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.statement .wrap{position:relative;padding-block:clamp(3rem,8vw,6rem)}
+.statement h2{font-size:clamp(2.2rem,5vw,4rem);max-width:20ch}
+.statement p{color:color-mix(in srgb,var(--onDeep) 82%,transparent);font-size:1.15rem;margin-top:1.4rem}
+.steps h2{margin-bottom:3rem}
+.steps ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;border-top:2px solid var(--ink)}
+.steps li{padding-top:1.6rem;position:relative}
+.steps li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.steps h3{font-size:1.35rem;margin-bottom:.6rem}
+.area .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.area figure{border-radius:calc(var(--r) * 2);overflow:hidden;aspect-ratio:5/4}
+.area figure img{width:100%;height:100%;object-fit:cover}
+.area ul{list-style:none;padding:0;margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.area li{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-weight:500}
+.area p{margin-top:1.2rem}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.faq h2{position:sticky;top:110px}
+details{border-bottom:1px solid var(--line);padding-block:1.3rem}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;font:700 1.2rem var(--display)}
+summary::-webkit-details-marker{display:none}
+summary i{color:var(--accent);transition:transform .3s var(--ease)}details[open] summary i{transform:rotate(45deg)}
+details p{margin-top:.8rem}
+.closing{background:var(--surface)}
+.closing .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.closing h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+.closing p{margin-top:1rem;font-size:1.1rem}.closing .actions{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:center;margin-top:1.8rem}
+.closing figure{border-radius:calc(var(--r) * 2);overflow:hidden;aspect-ratio:1}
+.closing figure img{width:100%;height:100%;object-fit:cover}
+footer{padding-block:2.5rem;font-size:.92rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer strong{color:var(--ink);font-family:var(--display)}
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+  .reveal.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){.hero__media img{animation:none}html{scroll-behavior:auto}}
+@media (max-width:900px){
+  .nav ul{display:none}
+  .hero .wrap,.area .wrap,.faq .wrap,.closing .wrap{grid-template-columns:1fr}
+  .hero__media{aspect-ratio:4/3}
+  .bento{grid-template-columns:1fr}
+  /* Must out-rank the per-count desktop spans (.bento[data-n="4"] .svc:last-child is 0,4,0). */
+  body .bento[data-n] .svc:nth-child(n){grid-column:1/-1;grid-row:auto}
+  .svc{min-height:0}.svc--lead{min-height:360px}
+  .steps ol{grid-template-columns:1fr 1fr}
+  .faq h2{position:static}
+}
+@media (max-width:560px){.steps ol{grid-template-columns:1fr}.nav .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="preview-note">Concept preview by Realm Systems, not affiliated with or endorsed by Methow Roofing. Photos from their public Facebook ads and stock photos. Removed on 5 November 2026. <a href="mailto:team@realmsystems.net?subject=Remove%20preview%20methow-roofing-kp939s">Ask to remove it</a></div>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top"><span class="mark" aria-hidden="true">M</span>Methow Roofing</a>
+  <ul><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#area">Area</a></li><li><a href="#questions">Questions</a></li></ul>
+  <a class="btn" href="tel:+15097414990">Request a Free Quote</a>
+</div></nav>
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <p class="eyebrow">Roofing in Methow</p>
+    <h1>Roofing for Methow homeowners</h1>
+    <p>New builds, full replacements, and storm-damage repairs for homes and builders across Eastern Washington.</p>
+    <div class="actions"><a class="btn" href="tel:+15097414990">Request a Free Quote <i class="ph ph-arrow-right" aria-hidden="true"></i></a><span>or call <a class="tel" href="tel:+15097414990">+1 509-741-4990</a></span></div>
+  </div>
+  <div class="hero__media"><img src="img/hero.jpg" alt="Methow Roofing at work" width="1400" height="1750" fetchpriority="high"></div>
+</div></header>
+<div class="facts"><div class="wrap"><dl><div><dt>Based in</dt><dd>Methow</dd></div><div><dt>Call</dt><dd><a class="tel" href="tel:+15097414990">+1 509-741-4990</a></dd></div><div><dt>Message</dt><dd><a href="https://www.facebook.com/61565074256490" rel="noopener">On Facebook</a></dd></div></dl></div></div>
+<section class="services" id="services"><div class="wrap">
+  <h2 class="reveal">Roofing for Homes and Builders</h2>
+  <div class="bento" data-n="5">
+      <article class="svc reveal svc--lead" style="--i:0">
+        <img src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?w=900&q=72&auto=format&fit=crop" alt="" loading="lazy" width="900" height="900">
+        <div class="svc__body"><h3>New Construction</h3><p>Expert crews for new builds in Eastern Washington.</p></div>
+      </article>
+      <article class="svc reveal" style="--i:1">
+        
+        <div class="svc__body"><h3>Roof Replacements</h3><p>Full re-roofs with metal, shingle, and membrane roofing options.</p></div>
+      </article>
+      <article class="svc reveal" style="--i:2">
+        
+        <div class="svc__body"><h3>Storm Damage Repairs</h3><p>Repair work for roofs damaged by storms.</p></div>
+      </article>
+      <article class="svc reveal" style="--i:3">
+        
+        <div class="svc__body"><h3>Metal Roofs</h3><p>Metal roofing made for Northwest weather.</p></div>
+      </article>
+      <article class="svc reveal" style="--i:4">
+        
+        <div class="svc__body"><h3>Shingle and Membrane</h3><p>Shingle and membrane roofs made for Northwest weather.</p></div>
+      </article>
+  </div>
+</div></section>
+
+<section class="statement"><img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?w=1800&q=72&auto=format&fit=crop" alt="" loading="lazy" width="1800" height="1000"><div class="wrap reveal">
+  <h2>Built Local for Your Roof</h2>
+  <p>Methow Roofing is locally owned, licensed, and insured, with honest pricing and clean job sites.</p>
+</div></section>
+<section class="steps" id="how"><div class="wrap">
+  <h2 class="reveal">How to Get Started</h2>
+  <ol>
+      <li class="reveal" style="--i:0"><h3>Call or Message</h3><p>Contact Methow Roofing about a home or building project.</p></li>
+      <li class="reveal" style="--i:1"><h3>Ask About Services</h3><p>Ask about new builds, re-roofs, storm repairs, and roof types.</p></li>
+      <li class="reveal" style="--i:2"><h3>Request an Inspection</h3><p>Ask about a free roof inspection or quote with no pressure.</p></li>
+      <li class="reveal" style="--i:3"><h3>Discuss Your Project</h3><p>Talk with the team about the roofing work you need.</p></li>
+  </ol>
+</div></section>
+<section class="area" id="area"><div class="wrap">
+  <figure class="reveal"><img src="https://images.unsplash.com/photo-1654848232800-20fbc9cdbc10?w=1200&q=72&auto=format&fit=crop" alt="A street of shingle roofs from above" loading="lazy" width="1200" height="960"></figure>
+  <div class="reveal" style="--i:1">
+    <h2>Serving Eastern Washington</h2>
+    <p>Homeowners and builders in Methow, Winthrop, Lake Chelan, Chelan, Twisp, Brewster, and Pateros.</p>
+    <ul><li>Methow</li><li>Eastern Washington</li><li>Winthrop</li><li>Lake Chelan</li><li>Chelan</li><li>Twisp</li><li>Brewster</li><li>Pateros</li></ul>
+  </div>
+</div></section>
+<section class="faq" id="questions"><div class="wrap">
+  <h2 class="reveal">Questions homeowners ask</h2>
+  <div>
+      <details class="reveal"><summary>What roofing work do you handle?<i class="ph ph-plus" aria-hidden="true"></i></summary><p>Methow Roofing handles new builds, full re-roofs, storm-damage repairs, and metal, shingle, and membrane roofs.</p></details>
+      <details class="reveal"><summary>Where does Methow Roofing work?<i class="ph ph-plus" aria-hidden="true"></i></summary><p>Methow Roofing serves homeowners and builders in Methow, Winthrop, Lake Chelan, Chelan, Twisp, Brewster, and Pateros.</p></details>
+      <details class="reveal"><summary>Are inspections and quotes free?<i class="ph ph-plus" aria-hidden="true"></i></summary><p>Yes. Inspections and quotes are free, with no pressure or surprises.</p></details>
+      <details class="reveal"><summary>How can I discuss my roof project?<i class="ph ph-plus" aria-hidden="true"></i></summary><p>Call or message Methow Roofing to discuss your new build, re-roof, storm-damage repair, or roofing options.</p></details>
+  </div>
+</div></section>
+<section class="closing" id="contact"><div class="wrap">
+  <div class="reveal">
+    <h2>Call Methow Roofing Today</h2>
+    <p>Call +1 509-741-4990 for a free roof inspection or quote.</p>
+    <div class="actions"><a class="btn" href="tel:+15097414990">Request a Free Quote <i class="ph ph-arrow-right" aria-hidden="true"></i></a><span>or call <a class="tel" href="tel:+15097414990">+1 509-741-4990</a></span></div>
+  </div>
+  <figure class="reveal" style="--i:1"><img src="https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?w=900&q=72&auto=format&fit=crop" alt="Roofers at work" loading="lazy" width="900" height="900"></figure>
+</div></section>
+<footer><div class="wrap">
+  <span><strong>Methow Roofing</strong> · Methow</span>
+  <span>Concept preview built by Realm Systems · team@realmsystems.net</span>
+</div></footer>
+<script>
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((list) => list.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .18 });
+  els.forEach((e) => io.observe(e));
+})();
+</script>
+</body>
+</html>
